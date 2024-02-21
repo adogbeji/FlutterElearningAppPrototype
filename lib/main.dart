@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import './views/intro/intro_screen.dart';
+import './util/route_names.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -35,8 +38,11 @@ class MyApp extends StatelessWidget {
       home: const Scaffold(
         body: Center(
           child: Text('Online Course App'),
-        ),
+        ),        
       ),
+      routes: {
+        RouteNames.intro:(context) => const IntroScreen(),
+      },
     );
   }
 }
