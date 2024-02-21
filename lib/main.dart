@@ -35,11 +35,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Online Course App'),
-        ),        
-      ),
+      // home: const Scaffold(
+      //   body: Center(
+      //     child: Text('Online Course App'),
+      //   ),        
+      // ),
       routes: {
         RouteNames.intro:(context) => const IntroScreen(),
       },
