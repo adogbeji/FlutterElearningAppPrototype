@@ -9,11 +9,36 @@ class IntroScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/images/intro/intro.png',),
+          Image.asset(
+            'assets/images/intro/intro.png',
+          ),
           const SizedBox(
             height: 30,
           ),
-          const Text('Grow Your Skills'),
+          Text(
+            'Grow Your Skills',
+            style: TextStyle(
+              fontSize: 25,
+              color: Colors.grey.shade900,
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(
+            'Choose your favourite course & start learning',
+            style: TextStyle(
+              fontSize: 17,
+              color: Colors.grey.shade500,
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('Getting Started'),
+          ),
         ],
       ),
     );
