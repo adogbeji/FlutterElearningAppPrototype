@@ -35,7 +35,19 @@ class IntroScreen extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: const Text('Getting Started'),
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.blue,
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(20),
+              // ),
+            ),
+            child: const Text(
+              'Getting Started',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
           ),
         ],
       ),
