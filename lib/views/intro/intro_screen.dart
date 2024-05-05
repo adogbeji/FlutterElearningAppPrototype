@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:elearning_app_prototype/util/route_names.dart';
+
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
 
@@ -34,7 +36,9 @@ class IntroScreen extends StatelessWidget {
             height: 20,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, RouteNames.courseHome);
+            },
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
               backgroundColor: Colors.blue,
