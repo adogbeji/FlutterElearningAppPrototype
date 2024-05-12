@@ -5,8 +5,9 @@ class CourseHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(children: [
-      Column(
+    return Row(children: [
+      const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Welcome John',
@@ -24,6 +25,15 @@ class CourseHeader extends StatelessWidget {
           ),
         ],
       ),
-    ]);
+      Row(
+        children: [
+          Container(
+            height: 40,
+            width: 40,
+            child: Icon(Icons.notifications),
+          ),
+        ],
+      ),
+    ],);
   }
 }
