@@ -20,7 +20,14 @@ class CourseHomeScreen extends StatelessWidget {
                   bottomRight: Radius.circular(25),
                 ),
               ),
-              child: const CourseHeader(),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10,),
+                child: Column(
+                  children: [
+                    CourseHeader(),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

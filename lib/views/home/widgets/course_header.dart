@@ -5,7 +5,10 @@ class CourseHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
       const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -14,6 +17,7 @@ class CourseHeader extends StatelessWidget {
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
           SizedBox(height: 10,),
@@ -21,6 +25,7 @@ class CourseHeader extends StatelessWidget {
             'Let\'s learn something new today!',
             style: TextStyle(
               fontSize: 18,
+              color: Colors.white,
             ),
           ),
         ],
@@ -30,7 +35,11 @@ class CourseHeader extends StatelessWidget {
           Container(
             height: 40,
             width: 40,
-            child: Icon(Icons.notifications),
+            decoration: const BoxDecoration(
+              color: Colors.white38,
+              borderRadius: BorderRadius.all(Radius.circular(10),),
+            ),
+            child: const Icon(Icons.notifications, color: Colors.white,),
           ),
         ],
       ),
