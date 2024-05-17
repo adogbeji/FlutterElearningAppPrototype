@@ -64,6 +64,20 @@ class CourseHeader extends StatelessWidget {
                 ),
               ),
             ),
+
+            const SizedBox(width: 10,),
+
+            Container(
+              height: 40,
+              width: 40,
+              decoration: const BoxDecoration(
+                color: Colors.white38,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              child: const Icon(Icons.person, color: Colors.white,),
+            ),
           ],
         ),
       ],
