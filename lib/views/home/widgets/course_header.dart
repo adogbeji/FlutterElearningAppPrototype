@@ -43,21 +43,25 @@ class CourseHeader extends StatelessWidget {
                   Radius.circular(10),
                 ),
               ),
-              child: Stack(
-                children: [
-                  const Icon(
-                    Icons.notifications,
-                    color: Colors.white,
-                  ),
-                  Container(
-                    height: 10,
-                    width: 10,
-                    decoration: const BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.all(Radius.circular(10),),
+              child: Align(
+                alignment: Alignment.center,
+                child: Stack(
+                  alignment: Alignment.topRight,
+                  children: [
+                    const Icon(
+                      Icons.notifications,
+                      color: Colors.white,
                     ),
-                  ),
-                ],
+                    Container(
+                      height: 10,
+                      width: 10,
+                      decoration: const BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.all(Radius.circular(10),),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
