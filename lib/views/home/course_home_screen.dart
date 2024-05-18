@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:elearning_app_prototype/views/home/widgets/course_header.dart';
+import 'package:elearning_app_prototype/views/home/widgets/course_search.dart';
 
 class CourseHomeScreen extends StatelessWidget {
   const CourseHomeScreen({super.key});
@@ -25,6 +26,7 @@ class CourseHomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     CourseHeader(),
+                    CourseSearch(),
                   ],
                 ),
               ),
