@@ -6,6 +6,7 @@ class CourseSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      autofocus: false,
       decoration: InputDecoration(
         hintText: 'Search for courses...',
         hintStyle: TextStyle(color: Colors.grey.shade400),
@@ -13,8 +14,10 @@ class CourseSearch extends StatelessWidget {
           padding: EdgeInsets.only(left: 10,),
           child: Icon(Icons.search, size: 20,),
         ),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(25),),
         fillColor: Colors.white,
         filled: true,
+        contentPadding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
       ),
     );
   }
