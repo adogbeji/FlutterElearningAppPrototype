@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:elearning_app_prototype/views/home/widgets/course_header.dart';
 import 'package:elearning_app_prototype/views/home/widgets/course_search.dart';
+import 'package:elearning_app_prototype/views/home/widgets/offers.dart';
 
 class CourseHomeScreen extends StatelessWidget {
   const CourseHomeScreen({super.key});
@@ -25,11 +26,20 @@ class CourseHomeScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10,),
                 child: Column(
                   children: [
+                    SizedBox(height: 10,),
                     CourseHeader(),
+                    SizedBox(height: 20,),
                     CourseSearch(),
                   ],
                 ),
               ),
+            ),
+
+            // OFFERS
+            const Column(
+              children: [
+                Offers(),
+              ],
             ),
           ],
         ),
