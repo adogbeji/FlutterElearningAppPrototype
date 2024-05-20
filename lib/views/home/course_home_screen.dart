@@ -29,14 +29,14 @@ class CourseHomeScreen extends StatelessWidget {
                     SizedBox(height: 10,),
                     CourseHeader(),
                     SizedBox(height: 20,),
-                    CourseSearch(),
+                    Expanded(child: CourseSearch(),),
                   ],
                 ),
               ),
             ),
 
             // OFFERS
-            const Column(
+            Column(
               children: [
                 Offers(),
               ],
