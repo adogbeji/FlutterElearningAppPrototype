@@ -1,9 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class Offers extends StatelessWidget {
+class Offers extends StatefulWidget {
   Offers({super.key});
 
+  @override
+  State<Offers> createState() => _OffersState();
+}
+
+class _OffersState extends State<Offers> {
   int _selectedPromo = 0;
 
   List<Image> widgetList = [
@@ -23,6 +28,11 @@ class Offers extends StatelessWidget {
             itemCount: widgetList.length,
             itemBuilder: (context, index) {
               return widgetList[index];
+            },
+            onPageChanged: (int selectedPage) {
+              setState(() {
+                _selectedPromo = selectedPage;
+              });
             },
           ),
 
