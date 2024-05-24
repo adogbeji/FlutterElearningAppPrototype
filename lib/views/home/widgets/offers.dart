@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Offers extends StatelessWidget {
@@ -19,20 +20,23 @@ class Offers extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         children: [
           PageView.builder(
-              itemCount: widgetList.length,
-              itemBuilder: (context, index) {
-                return widgetList[index];
-              }),
-          // ),
+            itemCount: widgetList.length,
+            itemBuilder: (context, index) {
+              return widgetList[index];
+            },
+          ),
 
           // CAROUSEL
           Container(
-            margin: const EdgeInsets.only(bottom: 30,),
+            margin: const EdgeInsets.only(
+              bottom: 30,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 for (int index = 0; index < widgetList.length; index++)
-                  createCircle()
+                  if (index == _selectedPromo) ...[createCircle(true)] else
+                    createCircle(false)
               ],
             ),
           ),
@@ -42,17 +46,19 @@ class Offers extends StatelessWidget {
   }
 
   // FUNCTION TO CREATE CAROUSEL DOTS
-  Widget createCircle() {
+  Widget createCircle(bool isCurrent) {
     return AnimatedContainer(
       duration: const Duration(
         milliseconds: 150,
       ),
-      margin: const EdgeInsets.symmetric(horizontal: 8,),
-      width: 8,
-      height: 8,
-      decoration: const BoxDecoration(
-        color: Colors.grey,
-        borderRadius: BorderRadius.all(
+      margin: const EdgeInsets.symmetric(
+        horizontal: 8,
+      ),
+      width: isCurrent ? 12 : 8,
+      height: isCurrent ? 12 : 8,
+      decoration: BoxDecoration(
+        color: isCurrent ? Colors.orange : Colors.grey,
+        borderRadius: const BorderRadius.all(
           Radius.circular(12),
         ),
       ),
