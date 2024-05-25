@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +18,22 @@ class _OffersState extends State<Offers> {
     Image.asset('assets/images/offer/offer2.png'),
     Image.asset('assets/images/offer/offer3.png'),
   ];
+
+  late Timer timer;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    timer = Timer.periodic(const Duration(seconds: 2), (timer) {
+      if (_selectedPromo < 2) {
+        _selectedPromo++;
+      } else {
+        _selectedPromo = 0;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
