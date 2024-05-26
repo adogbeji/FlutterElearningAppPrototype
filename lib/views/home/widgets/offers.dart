@@ -21,6 +21,8 @@ class _OffersState extends State<Offers> {
 
   late Timer timer;
 
+  final PageController controller = PageController();
+
   @override
   void initState() {
     // TODO: implement initState
@@ -31,6 +33,14 @@ class _OffersState extends State<Offers> {
         _selectedPromo++;
       } else {
         _selectedPromo = 0;
+      }
+
+      if (controller.positions.isNotEmpty) {
+        controller.animateToPage(
+          _selectedPromo, duration: 
+          const Duration(milliseconds: 400), 
+          curve: Curves.easeIn,
+        );
       }
     });
   }
@@ -43,6 +53,7 @@ class _OffersState extends State<Offers> {
         alignment: Alignment.bottomCenter,
         children: [
           PageView.builder(
+            controller: controller,
             itemCount: widgetList.length,
             itemBuilder: (context, index) {
               return widgetList[index];
