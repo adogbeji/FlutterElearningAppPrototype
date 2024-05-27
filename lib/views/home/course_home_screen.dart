@@ -36,10 +36,13 @@ class CourseHomeScreen extends StatelessWidget {
             ),
 
             // OFFERS
-            Column(
-              children: [
-                Offers(),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10,),
+              child: Column(
+                children: [
+                  Offers(),
+                ],
+              ),
             ),
           ],
         ),

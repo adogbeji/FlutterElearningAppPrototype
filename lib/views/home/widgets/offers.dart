@@ -28,7 +28,7 @@ class _OffersState extends State<Offers> {
     // TODO: implement initState
     super.initState();
 
-    timer = Timer.periodic(const Duration(seconds: 2), (timer) {
+    timer = Timer.periodic(const Duration(seconds: 5), (timer) {  // Rotates slideshow every 5s
       if (_selectedPromo < 2) {
         _selectedPromo++;
       } else {
