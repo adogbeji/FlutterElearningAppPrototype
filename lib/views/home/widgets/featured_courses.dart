@@ -5,10 +5,31 @@ class FeaturedCourses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Featured Courses'),
-      ),
-    ); 
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Featured Courses',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey.shade800,
+              ),
+            ),
+            const InkWell(
+              child: Text(
+                'See All',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
   }
 }
