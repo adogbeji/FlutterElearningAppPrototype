@@ -29,6 +29,13 @@ class FeaturedCourses extends StatelessWidget {
             ),
           ],
         ),
+        const SizedBox(height: 10,),
+
+        // SHOWS FEATURED COURSES IN HORIZONTAL LISTVIEW    
+        SizedBox(
+          height: 200,
+          child: ListView.builder(itemBuilder: (context, index) {}),
+        ),
       ],
     );
   }
