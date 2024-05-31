@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
 
+import 'package:elearning_app_prototype/models/course.dart';
+import 'package:elearning_app_prototype/data_provider/course_data_provider.dart';
+
 class FeaturedCourses extends StatelessWidget {
   const FeaturedCourses({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<Course> featuredCourseList = [
+      CourseDataProvider.courseList[9],
+      CourseDataProvider.courseList[0],
+      CourseDataProvider.courseList[1],
+      CourseDataProvider.courseList[2],
+      CourseDataProvider.courseList[10],
+      CourseDataProvider.courseList[5],
+    ];
+
     return Column(
       children: [
         Row(
