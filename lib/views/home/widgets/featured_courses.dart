@@ -46,7 +46,12 @@ class FeaturedCourses extends StatelessWidget {
         // SHOWS FEATURED COURSES IN HORIZONTAL LISTVIEW    
         SizedBox(
           height: 200,
-          child: ListView.builder(itemBuilder: (context, index) {}),
+          child: ListView.builder(
+            itemCount: featuredCourseList.length,
+            itemBuilder: (context, index) {
+              Course course = featuredCourseList[index];
+            }
+          ),
         ),
       ],
     );
