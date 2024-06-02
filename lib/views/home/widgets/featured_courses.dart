@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:elearning_app_prototype/models/course.dart';
 import 'package:elearning_app_prototype/data_provider/course_data_provider.dart';
+import 'package:elearning_app_prototype/views/home/widgets/course_item.dart';
 
 class FeaturedCourses extends StatelessWidget {
   const FeaturedCourses({super.key});
@@ -47,9 +48,11 @@ class FeaturedCourses extends StatelessWidget {
         SizedBox(
           height: 200,
           child: ListView.builder(
+            scrollDirection: Axis.horizontal,
             itemCount: featuredCourseList.length,
             itemBuilder: (context, index) {
               Course course = featuredCourseList[index];
+              return CourseItem(course: course);
             }
           ),
         ),

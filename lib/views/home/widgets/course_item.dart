@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'package:elearning_app_prototype/models/course.dart';
+
 class CourseItem extends StatelessWidget {
-  const CourseItem({super.key});
+  const CourseItem({super.key, required this.course});
+
+  final Course course;
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +17,10 @@ class CourseItem extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        child: const Column(
-          children: [],
+        child: Column(
+          children: [
+            Image.asset(course.thumbnailUrl),
+          ],
         ),
       ),
     );
