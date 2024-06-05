@@ -29,10 +29,22 @@ class CourseItem extends StatelessWidget {
                 children: [
                   Text(
                     course.title,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
+                      color: Colors.grey.shade800,
                     ),
+                  ),
+                  const SizedBox(height: 10,),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.person, 
+                        color: Colors.blue,
+                      ),
+                      const SizedBox(width: 5,),
+                      Text(course.createdBy, style: const TextStyle(fontSize: 12,),),
+                    ],
                   ),
                 ],
               ),
