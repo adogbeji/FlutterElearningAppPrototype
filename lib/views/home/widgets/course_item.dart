@@ -35,15 +35,50 @@ class CourseItem extends StatelessWidget {
                       color: Colors.grey.shade800,
                     ),
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     children: [
                       const Icon(
-                        Icons.person, 
+                        Icons.person,
                         color: Colors.blue,
                       ),
-                      const SizedBox(width: 5,),
-                      Text(course.createdBy, style: const TextStyle(fontSize: 12,),),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        course.createdBy,
+                        style: const TextStyle(
+                          fontSize: 12,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            size: 20,
+                            color: Colors.yellow.shade700,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            '${course.rate}',
+                            style: const TextStyle(
+                              fontSize: 15,
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ],
