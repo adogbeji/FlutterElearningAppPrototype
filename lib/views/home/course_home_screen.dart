@@ -4,6 +4,7 @@ import 'package:elearning_app_prototype/views/home/widgets/course_header.dart';
 import 'package:elearning_app_prototype/views/home/widgets/course_search.dart';
 import 'package:elearning_app_prototype/views/home/widgets/offers.dart';
 import 'package:elearning_app_prototype/views/home/widgets/featured_courses.dart';
+import 'package:elearning_app_prototype/views/home/widgets/category_list.dart';
 
 class CourseHomeScreen extends StatelessWidget {
   const CourseHomeScreen({super.key});
@@ -42,7 +43,8 @@ class CourseHomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Offers(),
-                  FeaturedCourses(),
+                  const FeaturedCourses(),
+                  const CategoryList(),
                 ],
               ),
             ),
