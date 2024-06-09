@@ -41,6 +41,7 @@ class CourseHomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10,),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Offers(),
                   const FeaturedCourses(),
