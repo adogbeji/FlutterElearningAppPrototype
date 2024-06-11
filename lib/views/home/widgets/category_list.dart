@@ -24,12 +24,17 @@ class CategoryList extends StatelessWidget {
         SizedBox(
           height: 35,
           child: ListView.builder(
+            scrollDirection: Axis.horizontal,
             itemCount: CourseCategory.values.length,
             itemBuilder: (context, index) {
               CourseCategory courseCategory = CourseCategory.values[index];
-            return Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10,),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Text(courseCategory.title),
               ),
             );
           }),
