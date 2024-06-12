@@ -21,6 +21,7 @@ class CategoryList extends StatelessWidget {
 
         const SizedBox(height: 10,),
 
+        // CATEGORIES
         SizedBox(
           height: 35,
           child: ListView.builder(
@@ -31,10 +32,16 @@ class CategoryList extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10,),
               child: Container(
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey.shade900,),
                 ),
-                child: Text(courseCategory.title),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,),
+                  child: Text(courseCategory.title, style: const TextStyle(fontSize: 15,),),
+                ),
               ),
             );
           }),
