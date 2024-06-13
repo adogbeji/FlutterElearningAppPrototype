@@ -10,8 +10,10 @@ class CourseList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
+      shrinkWrap: true,
+      physics: const ScrollPhysics(),
       children: CourseDataProvider.courseList.map((course) {
-        return CourseItem(course: course,);
+        return CourseItem(course: course);
       }).toList(),
     );
   }
