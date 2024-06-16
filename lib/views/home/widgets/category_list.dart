@@ -46,7 +46,7 @@ class CategoryList extends StatelessWidget {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
+                    color: category == courseCategory? Colors.blue: Colors.white,
                     border: Border.all(color: Colors.grey.shade900,),
                   ),
                   child: Padding(
