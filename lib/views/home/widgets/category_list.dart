@@ -25,38 +25,57 @@ class CategoryList extends StatelessWidget {
           ),
         ),
 
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
 
         // CATEGORIES
         SizedBox(
           height: 35,
           child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: CourseCategory.values.length,
-            itemBuilder: (context, index) {
-              CourseCategory courseCategory = CourseCategory.values[index];
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10,),
-              child: InkWell(
-                onTap: () {
-                  Provider.of<CourseCategoryChangeNotifier>(context, listen: false)
-                  .changeCategory(courseCategory);
-                },
-                child: Container(
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: category == courseCategory? Colors.blue: Colors.white,
-                    border: Border.all(color: Colors.grey.shade900,),
+              scrollDirection: Axis.horizontal,
+              itemCount: CourseCategory.values.length,
+              itemBuilder: (context, index) {
+                CourseCategory courseCategory = CourseCategory.values[index];
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20,),
-                    child: Text(courseCategory.title, style: const TextStyle(fontSize: 15,),),
+                  child: InkWell(
+                    onTap: () {
+                      Provider.of<CourseCategoryChangeNotifier>(context,
+                              listen: false)
+                          .changeCategory(courseCategory);
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: category == courseCategory
+                            ? Colors.blue
+                            : Colors.white,
+                        border: Border.all(
+                          color: Colors.grey.shade900,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                        ),
+                        child: Text(
+                          courseCategory.title,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: category == courseCategory
+                                ? Colors.white
+                                : Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            );
-          }),
+                );
+              }),
         ),
       ],
     );

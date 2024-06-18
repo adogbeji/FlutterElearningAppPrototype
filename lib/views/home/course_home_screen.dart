@@ -49,7 +49,7 @@ class CourseHomeScreen extends StatelessWidget {
                     const FeaturedCourses(),
                     // const CategoryList(),
                     // const CourseList(),
-                    CategoryCourseList(),
+                    const CategoryCourseList(),
                   ],
                 ),
               ),
