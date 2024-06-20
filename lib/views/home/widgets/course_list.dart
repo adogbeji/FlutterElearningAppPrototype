@@ -1,5 +1,6 @@
 // import 'package:elearning_app_prototype/models/course.dart';
 // import 'package:elearning_app_prototype/notifier/course_category_change_notifier.dart';
+import 'package:elearning_app_prototype/models/course_category.dart';
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
@@ -18,7 +19,7 @@ class CourseList extends StatelessWidget {
       crossAxisCount: 2,
       shrinkWrap: true,
       physics: const ScrollPhysics(),
-      children: CourseDataProvider.courseList.map((course) {
+      children: getCourseList(context).map((course) {
         return CourseItem(course: course);
       }).toList(),
     );
@@ -27,6 +28,10 @@ class CourseList extends StatelessWidget {
   List<Course> getCourseList(BuildContext context) {
     // Let's get selected category using Provider
     var category = Provider.of<CourseCategoryChangeNotifier>(context).category;
+
+    if (category == CourseCategory.all) {
+      return CourseDataProvider.courseList;
+    }
 
     return CourseDataProvider.courseList.where((course) => course.courseCategory == category).toList();
   }
