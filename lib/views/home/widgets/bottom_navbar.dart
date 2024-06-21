@@ -7,7 +7,18 @@ class BottomNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return const BottomAppBar(
       child: Row(
-        children: [],
+        children: [
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.home),
+              Text('Home'),
+            ],
+          ),
+          Text('My Courses'),
+          Text('Wishlist'),
+          Text('Account'),
+        ],
       ),
     );
   }
