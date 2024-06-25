@@ -7,23 +7,23 @@ class BottomNavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const BottomAppBar(
+    return BottomAppBar(
       child: Row(
         children: [
           Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(Icons.home),
-                SizedBox(height: 5,),
-                Text('Home', style: TextStyle(fontSize: 13,),),
+                Icon(Icons.home, color: getSelectedColor(1),),
+                const SizedBox(height: 5,),
+                Text('Home', style: TextStyle(fontSize: 13, color: getSelectedColor(1),),),
               ],
             ),
           ),
-          Text('My Courses'),
-          Text('Wishlist'),
-          Text('Account'),
+          const Text('My Courses'),
+          const Text('Wishlist'),
+          const Text('Account'),
         ],
       ),
     );
